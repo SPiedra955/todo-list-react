@@ -30,7 +30,7 @@ const List = () => {
                     </li>
                     {todos.map((el, i) =>
                         <li className="list-group-item d-flex justify-content-between" key={i}>
-                            <span>{el}</span> <FontAwesomeIcon icon={faX} />
+                            <span>{el}</span> <FontAwesomeIcon icon={faX} onClick={() => setTodos([...todos.slice(0, i), ...todos.slice(i + 1)])} />
                         </li>)}
                 </ul>
                 <div className="py-2">
