@@ -4,7 +4,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const List = () => {
     const [inputValue, setInputValue] = useState('');
@@ -29,8 +29,13 @@ const List = () => {
                         </input>
                     </li>
                     {todos.map((el, i) =>
-                        <li className="list-group-item d-flex justify-content-between" key={i}>
-                            <span>{el}</span> <FontAwesomeIcon icon={faX} onClick={() => setTodos([...todos.slice(0, i), ...todos.slice(i + 1)])} />
+                        <li className="item list-group-item d-flex justify-content-between align-items-center" key={i}>
+                            <span>{el}</span>
+                            <FontAwesomeIcon
+                                className="fontIcon"
+                                icon={faX}
+                                onClick={() => setTodos([...todos.slice(0, i), ...todos.slice(i + 1)])}
+                            />
                         </li>)}
                 </ul>
                 <div className="py-2">

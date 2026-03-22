@@ -9,3 +9,9 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.fontIcon{
+    display: none;
+}
+.item:hover .fontIcon{
+    display: block !important;
+}
