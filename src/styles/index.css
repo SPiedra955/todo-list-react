@@ -15,3 +15,6 @@
 .item:hover .fontIcon{
     display: block !important;
 }
+.customOpacity{
+    opacity: 0.25;
+}

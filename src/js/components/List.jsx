@@ -13,14 +13,14 @@ const List = () => {
     return (
         <div className=" container-fluid w-50">
             <div>
-                <h1 className="text-center mt-5 text-danger display-1">TODOS</h1>
+                <h1 className="text-center mt-5 text-danger display-1 customOpacity">todos</h1>
             </div>
             <div className="container ">
                 <ul className="list-group list-group-flush border mt-2 d-flex justify-content-between">
-                    <li className="list-group-item">
+                    <li className="list-group-item border-bottom-0">
                         <input
                             className="w-100 border-0"
-                            type="text border-0"
+                            type="text"
                             placeholder="What do you need to do ?"
                             onChange={(e) => setInputValue(e.target.value)}
                             value={inputValue}
@@ -29,10 +29,10 @@ const List = () => {
                         </input>
                     </li>
                     {todos.map((el, i) =>
-                        <li className="item list-group-item d-flex justify-content-between align-items-center" key={i}>
+                        <li className="item list-group-item d-flex justify-content-between align-items-center border-bottom-0" key={i}>
                             <span>{el}</span>
                             <FontAwesomeIcon
-                                className="fontIcon"
+                                className="fontIcon text-danger customOpacity"
                                 icon={faX}
                                 onClick={() => setTodos([...todos.slice(0, i), ...todos.slice(i + 1)])}
                             />
